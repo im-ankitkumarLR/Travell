@@ -1,0 +1,88 @@
+ *{
+box-sizing: border-box;
+font-size:20px;
+padding: 0;
+ 
+ }
+.menu-items ul{
+margin-top:0px;
+
+list-style-type: none;
+}
+.menu-items ul li{
+    margin-top: 40px;
+}
+ .humberg-menu{
+  
+     height:300px;
+     position: relative;
+
+ }
+ .menu-items{
+      
+     width: 30%;
+     height: 400px;
+    background-color:#cac4c4;
+    color:white;
+    padding-top: 40px;
+    margin-left:-5px;
+    margin-top:-5px;
+    transform: translateX(-110%);
+    transition: transform 0.5s ease-in-out;
+ }
+ .humberg-menu input[type="checkbox"]{
+     width: 40px;
+     height: 38px;
+     margin-left:-5px;
+     display:block;
+     z-index: 5;
+     position: absolute;
+     opacity: 0;
+ }
+ .humberg-lines{
+      
+     position: absolute;
+     left:-5px;
+     top: 0px;
+     width:35px ;
+     height:28px ;
+     z-index:2;
+     display:flex;
+     flex-direction:column;
+     justify-content:space-between;
+
+ }
+.humberg-lines .line{
+     display: block;
+    width: 100%;
+    height:3px;
+    background: #232323;
+ }
+ .humberg-menu input[type="checkbox"]:checked ~ .menu-items{
+     display: block;
+     left: 0%;
+     transform: translateX(0%);
+ }
+ .humberg-menu input[type="checkbox"]:checked ~ .humberg-lines .line{
+ background: rgb(168, 26, 26);
+ }
+ .humberg-lines .line1{
+     transform-origin: 0% 0%;
+     transition: tranform 0.2s ease-in-out;
+ }
+ .humberg-lines .line3{
+     transform-origin: 0% 100%;
+     transition: tranform 0.2s ease-in-out;
+}
+.humberg-menu input[type="checkbox"]:checked ~ .humberg-lines .line1{
+    transform: rotate(45deg);
+}
+.humberg-menu input[type="checkbox"]:checked ~ .humberg-lines .line2{
+    display: none;
+}
+
+.humberg-menu input[type="checkbox"]:checked ~ .humberg-lines .line3{
+    
+     transform: rotate(-45deg);
+ }
+
